@@ -1,0 +1,15 @@
+import cv2 as cv
+import numpy as np
+import pyautogui, time, keyboard
+from pynput.mouse import Button, Controller
+mouse = Controller()
+lol = 0
+while lol <= 5:
+    cords = pyautogui.locateCenterOnScreen('morot.png', confidence=0.9)
+    pyautogui.moveTo(cords)
+    mouse.click(Button.left,1)
+    time.sleep(2)
+    cords2 = pyautogui.locateCenterOnScreen('collect knapp.png')
+    pyautogui.moveTo(cords2)
+    mouse.click(Button.left,1)
+    lol += 1
